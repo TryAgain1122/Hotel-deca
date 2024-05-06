@@ -1,6 +1,6 @@
 'use client';
 
-import ThemeContext from "@/app/context/themeContext";
+import ThemeContext from "@/context/themeContext";
 import { useEffect, useState } from "react";
 
 
