@@ -7,7 +7,9 @@ export const heading1 = (
       Experience an Exquisite Hotel Immersed in Rich History and Timeless
       Elegance.
     </p>
+
     <button className='btn-primary'>Get Started</button>
+  
   </>
 );
 
