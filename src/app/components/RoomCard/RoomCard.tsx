@@ -28,7 +28,7 @@ const RoomCard: FC<Props> = props => {
       <div className='p-4 bg-white'>
         <div className='flex justify-between text-xl font-semibold'>
           <p>{name}</p>
-          <p>$ {price}</p>
+          <p>₱ {price}</p>
         </div>
 
         <p className='pt-2 text-xs'>{type} Room</p>
