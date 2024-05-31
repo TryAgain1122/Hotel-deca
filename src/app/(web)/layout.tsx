@@ -3,9 +3,9 @@ import { Poppins } from 'next/font/google';
 import './globals.css';
 import { NextAuthProvider } from '../components/AuthProvider/AuthProvider';
 import Toast from '../components/Toast/Toast';
-import Header from '../components/Header/Header';
 import Footer from '../components/Footer/Footer';
 import ThemeProvider from '../components/ThemeProvider/ThemeProvider'
+import Header from '../components/Header/Header';
 
 
 const poppins = Poppins({
