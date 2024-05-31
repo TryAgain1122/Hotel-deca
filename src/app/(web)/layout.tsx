@@ -5,7 +5,7 @@ import { NextAuthProvider } from '../components/AuthProvider/AuthProvider';
 import Toast from '../components/Toast/Toast';
 import Header from '../components/Header/Header';
 import Footer from '../components/Footer/Footer';
-import ThemeProvider from '../components/ThemeProvider/ThemeProvider.'
+import ThemeProvider from '../components/ThemeProvider/ThemeProvider'
 
 
 const poppins = Poppins({
