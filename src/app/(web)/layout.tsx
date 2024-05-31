@@ -8,6 +8,8 @@ import { NextAuthProvider } from '../components/AuthProvider/AuthProvider';
 import Toast from '../components/Toast/Toast';
 import ThemeProvider from '../components/ThemeProvider/themeProvider.';
 
+
+
 const poppins = Poppins({
   subsets: ["latin"],
   weight: ["400", "500", "700", "900"],
