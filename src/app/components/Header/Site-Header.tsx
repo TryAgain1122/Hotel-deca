@@ -47,14 +47,17 @@ const Header = () => {
           <li className='ml-2'>
             {darkTheme ? (
               <MdOutlineLightMode
+                size={30}
                 className='cursor-pointer'
                 onClick={() => {
                   setDarkTheme(false);
                   localStorage.removeItem('hotel-theme');
+              
                 }}
               />
             ) : (
               <MdDarkMode
+                size={30}
                 className='cursor-pointer'
                 onClick={() => {
                   setDarkTheme(true);
