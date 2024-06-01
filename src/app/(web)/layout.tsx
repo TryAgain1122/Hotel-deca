@@ -4,8 +4,8 @@ import './globals.css';
 import { NextAuthProvider } from '../components/AuthProvider/AuthProvider';
 import Toast from '../components/Toast/Toast';
 import ThemeProvider from '../components/ThemeProvider/ThemeProvider'
-import Header from '../components/header/Header';
-import Footer from '../components/footer/Footer';
+import Header from '../components/Header/Header';
+import Footer from '../components/Footer/Footer';
 
 
 const poppins = Poppins({
