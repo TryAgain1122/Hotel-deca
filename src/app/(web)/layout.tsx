@@ -4,8 +4,8 @@ import './globals.css';
 import { NextAuthProvider } from '../components/AuthProvider/AuthProvider';
 import Toast from '../components/Toast/Toast';
 import ThemeProvider from '../components/ThemeProvider/ThemeProvider'
-import Header from '../components/Header/Header';
-import Footer from '../components/Footer/Footer';
+import Headers from '../components/Header/Header';
+import Footers from '../components/Footer/Footer';
 
 
 const poppins = Poppins({
@@ -32,9 +32,9 @@ export default function RootLayout({
           <Toast />
           <ThemeProvider>
             <main className="font-normal">
-             <Header />
+             <Headers />
               {children}
-             <Footer/>
+             <Footers/>
             </main>
           </ThemeProvider>
         </NextAuthProvider>
