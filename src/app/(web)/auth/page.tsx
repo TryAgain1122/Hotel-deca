@@ -28,9 +28,9 @@ const Auth = () => {
   const { data: session} = useSession();
   const router = useRouter();
 
-  // useEffect(() => {
-  //   if (session) router.push('/');
-  // },[router, session]);
+  useEffect(() => {
+    if (session) router.push('/');
+  },[router, session]);
 
   const loginHandler = async () => {
     try {
@@ -67,8 +67,6 @@ const Auth = () => {
           </h1>
           <p>OR</p>
           <span className="inline-flex items-center">
-            <AiFillGithub className="mr-3 text-4xl cursor-pointer text-black dark:text-white" onClick={loginHandler}/>{" "}
-            |
             <FcGoogle className="ml-3 text-4xl cursor-pointer" onClick={loginHandler}/>
           </span>
         </div>
@@ -111,7 +109,7 @@ const Auth = () => {
           </button>
         </form>
 
-        <button className="text-blue-700 underline" onClick={loginHandler}>login</button>
+        <button className="text-blue-700 underline" onClick={loginHandler}>Already have an Account ?</button>
       </div>
     </section>
   );

@@ -6,8 +6,8 @@ import useSWR from 'swr';
 
 import { getRooms } from '@/libs/apis';
 import { Room } from '@/models/room';
-import Search from '@/app/components/Search/Search';
-import RoomCard from '@/app/components/RoomCard/RoomCard';
+import Search from '@/components/Search/Search';
+import RoomCard from '@/components/RoomCard/RoomCard';
 
 const Rooms = () => {
   const [roomTypeFilter, setRoomTypeFilter] = useState('');
