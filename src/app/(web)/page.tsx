@@ -10,7 +10,7 @@ export default async function Home() {
 
   console.log(featuredRoom);
   return (
-    <div>
+    <div className="duration-300">
       <HeroSection />
       <PageSearch />
       <FeaturedRoom featuredRoom={featuredRoom} />

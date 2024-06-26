@@ -6,6 +6,7 @@ import { LiaFireExtinguisherSolid } from 'react-icons/lia';
 import { AiOutlineMedicineBox } from 'react-icons/ai';
 import { GiSmokeBomb } from 'react-icons/gi';
 import { useState } from 'react';
+import axios from 'axios';
 
 import { getRoom } from '@/libs/apis';
 import LoadingSpinner from '../../loading';
@@ -13,8 +14,6 @@ import HotelPhotoGallery from '@/components/HotelPhotoGallery/HotelPhotoGallery'
 import BookRoomCta from '@/components/BookRoomCta/BookRoomCta';
 import toast from 'react-hot-toast';
 import { getStripe } from '@/libs/stripe';
-import axios from 'axios';
-
 
 const RoomDetails = (props: { params: { slug: string } }) => {
   const {
@@ -49,7 +48,7 @@ const RoomDetails = (props: { params: { slug: string } }) => {
     if (!checkinDate || !checkoutDate)
       return toast.error('Please provide checkin / checkout date');
 
-    if (checkinDate > checkoutDate) 
+    if (checkinDate > checkoutDate)
       return toast.error('Please choose a valid checkin period');
 
     const numberOfDays = calcNumDays();
@@ -79,16 +78,16 @@ const RoomDetails = (props: { params: { slug: string } }) => {
       }
     } catch (error) {
       console.log('Error: ', error);
-      toast.error('An error occured');
+      toast.error('Please Login your Account');
     }
   };
- 
+
   const calcNumDays = () => {
     if (!checkinDate || !checkoutDate) return;
     const timeDiff = checkoutDate.getTime() - checkinDate.getTime();
-    const noOfDays = Math.ceil(timeDiff /  (24 * 60 * 60 * 1000))
+    const noOfDays = Math.ceil(timeDiff / (24 * 60 * 60 * 1000));
     return noOfDays;
-  }
+  };
 
   return (
     <div>
@@ -116,7 +115,7 @@ const RoomDetails = (props: { params: { slug: string } }) => {
               </div>
               <div className='mb-11'>
                 <h2 className='font-bold text-3xl mb-2'>Description</h2>
-                <p>{room.description}</p>
+                <p>{room.description} <br /> </p>
               </div>
               <div className='mb-11'>
                 <h2 className='font-bold text-3xl mb-2'>Offered Amenities</h2>
@@ -164,13 +163,12 @@ const RoomDetails = (props: { params: { slug: string } }) => {
                 <div className='items-center mb-4'>
                   <p className='md:text-lg font-semibold'>Customer Reviews</p>
                 </div>
-                {/* <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>
-                  <RoomReview roomId={room._id} />
-                </div> */}
+                <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>
+                  {/* <RoomReview roomId={room._id} /> */}
+                </div>
               </div>
             </div>
           </div>
-
           <div className='md:col-span-4 rounded-xl shadow-lg dark:shadow dark:shadow-white sticky top-10 h-fit overflow-auto'>
             <BookRoomCta
               discount={room.discount}
