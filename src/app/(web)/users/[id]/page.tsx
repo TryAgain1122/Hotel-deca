@@ -14,6 +14,7 @@ import { BsJournalBookmark, BsJournalBookmarkFill } from "react-icons/bs";
 import { GiMoneyStack } from "react-icons/gi";
 import toast from "react-hot-toast";
 import Table from "@/components/Table/Table";
+import Chart from "@/components/Chart/Chart";
 
 const UserDetails = (props: { params: { id: string } }) => {
   const {
@@ -129,6 +130,9 @@ const UserDetails = (props: { params: { id: string } }) => {
               src={userData.image}
               alt="User Name"
             />
+             <p className="block w-fit md:hidden text-sm py-2">
+            {userData.email}
+          </p>
           </div>
           <p className="block w-fit md:hidden text-sm py-2">
             {userData.about ?? ""}
@@ -188,6 +192,12 @@ const UserDetails = (props: { params: { id: string } }) => {
             )
          ) : (
             <></>
+         )}
+
+         {currentNav === 'amount'? (
+          userBookings && <Chart userBookings={userBookings} />
+         ) : (
+          <></>
          )}
         </div>
       </div>

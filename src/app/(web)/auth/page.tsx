@@ -48,6 +48,7 @@ const Auth = () => {
       const user = await signUp(formData);
       if (user) {
         toast.success("Sucess please sign in");
+        signIn('sanity-login')
       }
       console.log(formData);
     } catch (error) {
