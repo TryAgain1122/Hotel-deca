@@ -27,7 +27,7 @@ export const options = {
     }
 }
 
-const Chart: FC<{userBookings: Booking[]}>= ({ userBookings }) => {
+const Chart: FC<{userBookings: Booking[]}> = ({ userBookings }) => {
     const labels = userBookings.map(booking => booking.hotelRoom.name);
     const amountSpent = userBookings.map(booking => booking.totalPrice);
   return (
